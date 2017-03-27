@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>Inventory</h1>
+    <form action="/create" method="post">
+      <label for="collection">Enter your collection</label>
+      <input id="collection" name="collection" type="text">
+      <button type="submit">Collect</button>
+    </form>
+    <form action="/find" method="post">
+      <label for="find">Enter the number</label>
+      <input id="find" name="find" type="text">
+      <button type="submit">Find</button>
+    </form>
+    <form action="/delete" method="post">
+      <button type="submit">DeleteAll</button>
+    </form>
+      {% if results is not empty %}
+        {% for result in results %}
+          <li>{{ result }}</li>
+        {% endfor %}
+      {% endif %}
+
+  </body>
+</html>

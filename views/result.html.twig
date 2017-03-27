@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Find</title>
+  </head>
+  <body>
+    {% if results is not empty %}
+      {% for result in results %}
+        {{ result }}
+      {% endfor %}
+    {% endif %}
+  </body>
+</html>
